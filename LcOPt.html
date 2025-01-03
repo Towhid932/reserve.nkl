@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--FONT AWESOME-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!--GOOGLE FONTS-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+  <title>TRC-2024, NKL</title>
+  <script defer src="script.js"></script>
+  <style>
+:root {
+  --color-primary: #24cbc8;
+  --color-secondary: #ff768b;
+  --color-tertiary: #ff7a42;
+  --color-primary-darker: #139e9c;
+  --color-secondary-darker: #c94559;
+  --color-tertiary-darker: #d35e2c;
+  --color-primary-opacity: #24cbc856;
+  --color-secondary-opacity: #ff768b56;
+  --color-tertiary-opacity: #ff7b4256;
+  --gradient-primary: linear-gradient(to top left, #139e9c, #24cbc8);
+  --gradient-secondary: linear-gradient(to top left, #d35e2c, #ff7a42);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: darkslategray;
+  background-color: #f3f3f3;
+  overflow-x: hidden;
+}
+.hedar{
+  display: flex;
+  justify-content:space-between;
+  padding: 5px 5px;
+  color: #fff;
+  background: rgb(19, 27, 67)
+}
+.logo{
+  width: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.hmid{
+  font-size: 7px;
+  text-align: center;
+}
+.hmid p{
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+.hmid h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 11px;
+}
+
+.text-wrapper{
+    background: #0084ff;
+    font-size: 13px;
+    font-family:sans-serif;
+    width:100%;
+    margin: 0 auto;
+    display:flex;
+    align-items: center;
+    background-image: linear-gradient(to left, #073763 , #ffffff);
+    margin-right:0px;
+    border-radius: 10px 0px 0px 10px;
+}
+.text-wrapper span{
+    position:relative;
+    display:inline-block;
+    overflow: hidden;
+    flex-shrink:0;
+    padding: 1px 4px;
+    background: #f00;
+    color: #fff;
+    clip-path: polygon(85% 0%, 100% 100%, 0% 100%, 0% 0%);
+}
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #1b4f72;
+}
+.button {
+  flex: 1;
+  background-color: DodgerBlue;
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 2px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 10px;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.button a{
+  text-decoration: none;
+}
+.button2 {background-color: #008CBA;}
+.button3 {background-color: #f44336;}
+.button4 {background-color: #e7e7e7;
+          color: black;}
+.button5 {background-color: #0f82e7;}
+ h4{
+   margin-top: 15px;
+   margin-right: 10px;
+   margin-left: 10px;
+  padding: 5px;
+  background-color: DodgerBlue;
+  text-align: center;;
+}
+h6{
+  margin-top: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
+ padding: 5px;
+ background-color: rgb(38, 48, 57);
+ text-align: center;;
+}
+.form{
+  margin: 0 10px;
+  padding: 5px;
+  background: #131B42;
+  color: whitesmoke;
+}
+
+input, select{
+  width: 100%;
+  padding: 2px;
+}
+#submit{
+  font-weight: 500;
+  padding: 5px;
+  background: seagreen;
+}
+#submit:hover{
+  font-weight: 700;
+  padding: 5px;
+  background: rgb(7, 234, 105);
+  cursor: pointer;
+}
+HTML CSS Result Skip Results Iframe
+body{
+margin:0;
+overflow-x:hidden;
+}
+.footer{
+background:#000;
+padding:5px 0px;
+
+font-family: 'Play', sans-serif;
+text-align:center;
+}
+
+.footer .row{
+width:100%;
+margin:1% 0%;
+padding:0.6% 0%;
+color:gray;
+font-size:0.8em;
+}
+.footer #rowlink i{
+  padding: 10 px 0;
+}
+.footer .row a{
+text-decoration:none;
+color:gray;
+transition:0.5s;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: #24cbc856;
+  padding: 1rem 1rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+}
+
+
+.card-container{
+    margin: 5px auto;
+    max-width: 100%;
+    height: 80%;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #cecdcd, -5px -5px 10px #ffffff;
+    padding: 5px;
+}
+.card-image{
+    width: 98%;
+    height: 180px;
+    background-color: #191970;
+    overflow: hidden;
+    margin: 2rem auto;
+    border-radius: 0%; 
+    outline: 2px solid #444;
+    outline-offset: 5px;
+}
+.card-image img{
+    width: 100%;
+    height: 100%;
+}
+.card-details{
+    text-align: center;
+    margin-top: 3rem;
+}
+.card-details h2 {
+  margin-top: 5pxa;
+   font-size: 1.5rem;
+   letter-spacing: 3px;
+}
+.card-details p {
+    font-size: 1rem;
+    text-align: justify;
+    margin: 1rem 0;
+}
+.card-details .designation{
+    text-align: center;
+    color: lightseagreen;
+    text-transform: uppercase ;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 2rem;
+    margin-bottom: 5px;
+}
+.card-details a {
+    text-decoration: none;
+    background-color: slategray;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 4px 10px;
+    display: inline-block;
+    margin-top: 50px;
+    border-radius: 5px;
+
+}
+.card-details a:hover{
+    background-color: #444;
+}
+.card-details a:active{
+    outline: 5px solid rgba(32, 128, 171, 0.5);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+.btn--close-modal {
+  font-family: inherit;
+  color: red;
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <div>
+    <div class="hedar">
+      <div class="hleft">
+        <img src="images/police_logo.png" alt="BD Police" class="logo">
+      </div>
+      <div class="hmid">
+        <!-- <h1>Trainee Recruit Constable Recruitment, September 2024</h1> -->
+      <p>Reserve Office, Noakhali</p>
+      </div>
+      <div class="hright">
+        <img src="images/nkllogo1.jpg" alt="NKL" class="logo">
+      </div>
+    </div>
+      <div class="text-wrapper">
+          <span>বার্তা</span>
+        <marquee scrollamount="4">মুন্সি/অপারেটর বাটনে ক্লিক করে আপনার থানা/ইউনিটে দায়িত্বরত সেকেন্ড অফিসার, মুন্সি, কম্পিউটার অপারেটরদের তথ্যাদি পূরণ করার জন্য অনুরোধ করা হলো। ড্রাইভার ও অন্যান্যদের তথ্যাদি পূরণ করার জন্য পরে বলা হবে। কেউ Whatsapp Group এ এড না থাকলে ০১৬৪১৬৬৩৫৯৬ নাম্বারে যোগাযোগ করুন। ধন্যবাদ.....</marquee>
+ 
+      </div>
+      
+    <nav>
+<button class="button button5"><a href="index.html">Home</a></button>
+<!-- <button class="button button1"><a href="https://docs.google.com/spreadsheets/d/1QWlJyy91-V9QDVrbitzfAImOzKEhtnudyfOCLgT0TkM/edit?usp=sharing">Submited List</a></button>
+<button class="button button2"><a href="https://drive.google.com/file/d/153nnedZWtYe290hZFYRNMTi_rjHKRzHC/view?usp=sharing">Result:Written</a></button>
+<button class="button button3"><a href="https://drive.google.com/file/d/109Uc6NqMkHjixKmQHvKOeLuccMoqY1ZM/view?usp=drive_link">Result:Viva</a></button>
+<button class="button button4 btn--show-modal" href="#">Dev</button>
+<button class="button button5"><a href="trcJan.html">TRC Jan 24</a></button>
+<button class="button button5" style="visibility: hidden;">Gray</button>
+<button class="button button5" style="visibility: hidden;">Gray</button> -->
+    </nav>
+    
+    <h6 style="font-size:18px;font-weight:bold;color:forestgreen">Data Enty Form, Noakhali, 2025</h6>
+    
+    <!-- style="visibility: hidden; -->
+    <div class="form">
+       <form name="submit-to-google-sheet">
+        <label for="Ps">থানা/ইউনিট: </label>
+        <select name="Unit" id="ps">
+        <option value="Select">--Select--</option>
+        <option value="সুধারাম মডেল থানা">সুধারাম মডেল থানা</option>
+        <option value="বেগমগঞ্জ মডেল থানা">বেগমগঞ্জ মডেল থানা</option>
+        <option value="চাটখিল থানা">চাটখিল থানা</option>
+        <option value="সোনাইমুরি থানা">সোনাইমুরি থানা</option>
+        <option value="সেনবাগ থানা">সেনবাগ থানা</option>
+        <option value="কোম্পানীগঞ্জ থানা">কোম্পানীগঞ্জ থানা</option>
+        <option value="কবিরহাট থানা">কবিরহাট থানা</option>
+        <option value="চরজব্বার থানা">চরজব্বার থানা</option>
+        <option value="হাতিয়া থানা">হাতিয়া থানা</option>
+        <option value="ভাসানচর থানা">ভাসানচর থানা</option>
+        <option value="ডিবি">ডিবি</option>
+        <option value="ডিএসবি">ডিএসবি</option>
+        <option value="সদর কোর্ট">সদর কোর্ট</option>
+        <option value="হাতিয়া কোর্ট">হাতিয়া কোর্ট</option>
+        <option value="মোর্শেদ বাজার তদন্ত কেন্দ্র">মোর্শেদ বাজার তদন্ত কেন্দ্র</option>
+        <option value="জাহাজমারা তদন্ত কেন্দ্র">জাহাজমারা তদন্ত কেন্দ্র</option>
+        <option value="নিঝুমদ্বীপ তদন্ত কেন্দ্র">নিঝুমদ্বীপ তদন্ত কেন্দ্র</option>
+        <option value="খিলপাড়া তদন্ত কেন্দ্র">খিলপাড়া তদন্ত কেন্দ্র</option>
+        <option value="কেরিংচর তঃ কেন্দ্র">কেরিংচর তঃ কেন্দ্র</option>
+        <option value="সদর ফাঁড়ি">সদর ফাঁড়ি</option>
+        <option value="চৌমুহনী ফাঁড়ি">চৌমুহনী ফাঁড়ি</option>
+        <option value="চরজব্বর পুলিশ ফাঁড়ি">চরজব্বর পুলিশ ফাঁড়ি</option>
+        <option value="সাগরিয়া পুলিশ ফাঁড়ি">সাগরিয়া পুলিশ ফাঁড়ি</option>
+        <option value="তমরুদ্দি পুলিশ ফাঁড়ি">তমরুদ্দি পুলিশ ফাঁড়ি</option>
+        <option value="নলচিরা নৌ পুলিশ ফাঁড়ি">নলচিরা নৌ পুলিশ ফাঁড়ি</option>
+        <option value="সদর ট্রাফিক">সদর ট্রাফিক</option>
+        <option value="চৌমুহনী ট্রাফিক">চৌমুহনী ট্রাফিক</option>
+        <option value="সেনবাগ ট্রাফিক">সেনবাগ ট্রাফিক</option>
+        <option value="সোনাইমুরি ট্রাফিক">সোনাইমুরি ট্রাফিক</option>
+        <option value="কোম্পানীগঞ্জ ট্রাফিক">কোম্পানীগঞ্জ ট্রাফিক</option>
+        <option value="চেয়ারম্যানঘাট পুলিশ ক্যাম্প">চেয়ারম্যানঘাট পুলিশ ক্যাম্প</option>
+        <option value="ছনখোলা পুলিশ ক্যাম্প">ছনখোলা পুলিশ ক্যাম্প</option>
+        <option value="চরবালুয়া পুলিশ (উড়িরচর) ক্যাম্প">চরবালুয়া পুলিশ (উড়িরচর) ক্যাম্প</option>
+        <option value="রাজগঞ্জ বাজার ক্যাম্প">রাজগঞ্জ বাজার ক্যাম্প</option>
+        <option value="মাঈনুদ্দিন বাজার ক্যাম্প">মাঈনুদ্দিন বাজার ক্যাম্প</option>
+        <option value="সদর সার্কেল অফিস">সদর সার্কেল অফিস</option>
+        <option value="বেগমগঞ্জ সার্কেল অফিস">বেগমগঞ্জ সার্কেল অফিস</option>
+        <option value="চাটখিল সার্কেল অফিস">চাটখিল সার্কেল অফিস</option>
+        <option value="হাতিয়া সার্কেল অফিস">হাতিয়া সার্কেল অফিস</option>
+        <option value="অর্থ/প্রশাসন">অর্থ/প্রশাসন</option>
+        <option value="অপরাধ শাখা">অপরাধ শাখা</option>
+        <option value="মহিলা পুলিশ">মহিলা পুলিশ</option>
+        <option value="ক্রাইম প্রিভেনশন এন্ড কমিউনিটি পুলিশিং">ক্রাইম প্রিভেনশন এন্ড কমিউনিটি পুলিশিং</option>
+        <option value="রিজার্ভ অফিস">রিজার্ভ অফিস</option>
+        <option value="পুলিশ লাইন">পুলিশ লাইন</option>
+        <option value="এমটি">এমটি</option>
+        <option value="রেশন স্টোর">রেশন স্টোর</option>
+        <option value="ক্লোথিং স্টোর">ক্লোথিং স্টোর</option>
+        <option value="অস্ত্রাগার">অস্ত্রাগার</option>
+        <option value="ব্যান্ড গ্রুপ">ব্যান্ড গ্রুপ</option>
+        <option value="পুলিশ হাসপাতাল">পুলিশ হাসপাতাল</option>
+        <option value="ইন-সার্ভিস ট্রেনিং">ইন-সার্ভিস ট্রেনিং</option>
+        <option value="পুলিশ কন্ট্রোল রুম">পুলিশ কন্ট্রোল রুম</option>
+        <option value="রিজার্ভ সাময়িক বরখাস্ত">রিজার্ভ সাময়িক বরখাস্ত</option>
+        <option value="ইউমেন সাপোর্ট সেন্টার">ইউমেন সাপোর্ট সেন্টার</option>
+        <option value="রিজার্ভ লাইন ওয়ার">রিজার্ভ লাইন ওয়ার</option>
+        <option value="পুলিশ লাইন্স ড্রাইভার">পুলিশ লাইন্স ড্রাইভার</option>
+        <option value="ডিপার্টামেন্টাল স্টোর">ডিপার্টামেন্টাল স্টোর</option>
+        
+
+        </select><br>
+        <label for="PetId">বিপি নম্বর: </label>
+      <input type="tel" name="BP Number" minlength=12 maxlength="12" required placeholder="Physical endurance test Serial no 12 Digit"><br>
+      <label for="Rank">পদবি: </label>
+       <select name="Rank" id="gendar">
+         <option value="Select">--Select--</option>
+         <option value="কনস্টেবল">কনস্টেবল</option>
+         <option value="এএসআই (নিরস্ত্র)">এএসআই (নিরস্ত্র)</option>
+         <option value="এসআই (নিরস্ত্র)">এসআই (নিরস্ত্র)</option>
+       </select><br>
+       <label for="Brands">ব্রাশ নম্বর (যদি থাকে): </label>
+      <input type="text" name="Brash No" required placeholder="ব্রাশ নম্বর"><br>
+      <label for="Name">নাম: </label>
+      <input type="text" name="Name" required placeholder="নাম বংলায়"><br>
+       
+       <label for="Post">পদ: </label>
+       <select name="Post" id="quota">
+         <option value="qu0">--Select--</option>
+         <option value="মুন্সি-১">মুন্সি-১</option>
+         <option value="মুন্সি-২">মুন্সি-২</option>
+         <option value="অপারেটর-১">অপারেটর-১</option>
+         <option value="অপারেটর-২">অপারেটর-২</option>
+         <option value="সেকেন্ড অফিসার">সেকেন্ড অফিসার</option>
+       </select><br>
+       
+       <label for="Mobile">What's app Number: </label>
+       <input type="tel" name="Mobile Number" minlength="11" maxlength="11" required placeholder="What's app mobile number"><br>
+        <input id="submit" type="submit" name="submit">
+        <span id="success"></span>
+        </form>
+    </div>
+      
+    </div>
+    <footer>
+      <div class="footer">
+        <div class="row">
+          <a href="https://www.facebook.com/Towhid261?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+        </div>
+    
+        <div class="row">
+          <ul>
+            <li><a href="#" class="btn--show-modal">Contact us</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Career</a></li>
+          </ul>
+        </div>
+    
+        <div class="row">
+          TRC_NKL Copyright © 2024 TRC_NKL - All rights reserved || Designed By: Md. Towhidul Islam <br>Contact No:01641663596/01846103094
+        </div>
+      </div>
+    </footer>
+  </div>
+    <!--modal-->
+<div class="modal hidden">
+  <button class="btn--close-modal">&times;</button>
+  <!--card -->
+
+  <div class="card-container">
+    <div class="card-image">
+      <img src="img/towhid1.JPG" alt="TOWHID">
+    </div>
+    <div class="card-details">
+      <h2>MD. TOWHIDUL ISLAM</h2>
+      <p class="designation">Web Devloper</p>
+      <p>Reserve Office, Noakhali</p>
+      <p>Banglades Police</p>
+      <a href="#">Contact: 01641663596</a>
+    </div>
+  </div>
+  
+  <script>
+    const result=document.getElementById("result")
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyZNZ-ciKDgKVoLmhQyQMVfRM6Ci2Yl55wkacFmSMUzk0YtOw6J3VPowYpqGDMRPjfr/exec'
+      const form = document.forms['submit-to-google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then(response => alert('ধন্যবাদ!!! আপনার তথ্যসমূহ জমা হয়েছে। ১:০০ঘন্টার মধ্যে আপনাকে TRC September 2024 Whatsapp গ্রুপে অ্যাড করা হবে।!!✌️✌️', response))
+          
+          .catch(error => console.error('Error!', error.message))
+          alert("আপনার তথ্য সঠিক? সঠিক থাকলে OK বাটনে ক্লিক করুন",form.reset())
+         
+      })
+    </script>
+
+</body>
+
+</html>
