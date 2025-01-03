@@ -149,3 +149,31 @@ body {
     clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
     font-weight:600;
 }
+
+button{
+    top: 3px;
+    margin-left: 11%;
+    color: #fff;
+    font-size: 13px;
+    padding: 5px;
+    align-items: center;
+    position: absolute;
+    background-image: linear-gradient(to left, #359dfe , #1ca803);
+    border-radius: 10px 0px 0px 10px;
+}
+
+button a{
+    text-decoration: none;
+}
+button:hover, button:hover a{
+    color: #fff;
+    text-decoration: dotted;
+    font-weight: 700;
+    background-image: linear-gradient(to left, black , black);
+}
+@media only screen and (max-width: 600px) {
+    button{
+        top: 3px;
+        margin-left: 11%;
+    }
+  }
