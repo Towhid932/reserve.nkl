@@ -332,7 +332,6 @@ transition:0.5s;
 <button class="button button5" style="visibility: hidden;">Gray</button> -->
     </nav>
     
-    
     <h6 style="font-size:18px;font-weight:bold;color:forestgreen">Data Enty Form, Noakhali, 2025</h6>
     
     <!-- style="visibility: hidden; -->
@@ -403,7 +402,7 @@ transition:0.5s;
 
         </select><br>
         <label for="PetId">বিপি নম্বর: </label>
-      <input type="tel" name="BP Number" minlength=12 maxlength="12" required placeholder="BP Number 12 Digit"><br>
+      <input type="text" name="BP Number" minlength=12 maxlength="12" required placeholder="Physical endurance test Serial no 12 Digit"><br>
       <label for="Rank">পদবি: </label>
        <select name="Rank" id="gendar">
          <option value="Select">--Select--</option>
@@ -412,9 +411,9 @@ transition:0.5s;
          <option value="এসআই (নিরস্ত্র)">এসআই (নিরস্ত্র)</option>
        </select><br>
        <label for="Brands">ব্রাশ নম্বর (যদি থাকে): </label>
-      <input type="text" name="Brash No" placeholder="ব্রাশ নম্বর"><br>
+      <input type="tel" name="Brash No" required placeholder="ব্রাশ নম্বর"><br>
       <label for="Name">নাম: </label>
-      <input type="text" name="Name" required placeholder="নাম বংলায়"><br>
+      <input type="text" name="Name" required placeholder="নাম বাংলায়"><br>
        
        <label for="Post">পদ: </label>
        <select name="Post" id="quota">
@@ -485,7 +484,7 @@ transition:0.5s;
       form.addEventListener('submit', e => {
         e.preventDefault()
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-          .then(response => alert('ধন্যবাদ!!! আপনার তথ্যসমূহ জমা হয়েছে। ১:০০ঘন্টার মধ্যে আপনাকে TRC September 2024 Whatsapp গ্রুপে অ্যাড করা হবে।!!✌️✌️', response))
+          .then(response => alert('ধন্যবাদ!!! আপনার তথ্যসমূহ জমা হয়েছে। ১২:০০ঘন্টার মধ্যে আপনাকে Whatsapp গ্রুপে অ্যাড করা হবে।!!✌️✌️', response))
           
           .catch(error => console.error('Error!', error.message))
           alert("আপনার তথ্য সঠিক? সঠিক থাকলে OK বাটনে ক্লিক করুন",form.reset())
