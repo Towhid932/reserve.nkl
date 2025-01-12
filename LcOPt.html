@@ -477,13 +477,14 @@ transition:0.5s;
   </div>
   
   <script>
-    const result=document.getElementById("result")
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbyZNZ-ciKDgKVoLmhQyQMVfRM6Ci2Yl55wkacFmSMUzk0YtOw6J3VPowYpqGDMRPjfr/exec']
+        const result=document.getElementById("result")
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyZNZ-ciKDgKVoLmhQyQMVfRM6Ci2Yl55wkacFmSMUzk0YtOw6J3VPowYpqGDMRPjfr/exec'
+      const form = document.forms['submit-to-google-sheet']
     
       form.addEventListener('submit', e => {
         e.preventDefault()
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-          .then(response => alert('ধন্যবাদ!!! আপনার তথ্যসমূহ জমা হয়েছে। ১২:০০ঘন্টার মধ্যে আপনাকে Whatsapp গ্রুপে অ্যাড করা হবে।!!✌️✌️', response))
+          .then(response => alert('ধন্যবাদ!!! আপনার তথ্যসমূহ জমা হয়েছে। ১:০০ঘন্টার মধ্যে আপনাকে রিজার্ভ অফিসের Whatsapp গ্রুপে অ্যাড করা হবে।!!✌️✌️', response))
           
           .catch(error => console.error('Error!', error.message))
           alert("আপনার তথ্য সঠিক? সঠিক থাকলে OK বাটনে ক্লিক করুন",form.reset())
