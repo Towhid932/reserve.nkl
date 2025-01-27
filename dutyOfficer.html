@@ -1,209 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- DataTable CSS  -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.bootstrap5.min.css">
-
-    <title>আজকের ডিউটি</title>
+    <title>অফিস ডিউটি</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <style>
-        .hide{
-            display: none;
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            background: #eee;
         }
-        h1, h3{
+        .container{
             text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+        .container a{
+            text-decoration: none;
+            font-size: 20px;
+            color: #924eb1;
+            padding: 0 14px;
+        }
+        h4, h5{
+            padding: 0;
+            margin: 0;
+        }
+        #date-today{
+            font-size: 15px;
+        }
+        
+           .person{
+                display: none;
+            }
+        .card{
+            font-family: "Candra", sans-serif;
+            width: 340px;
+            overflow: hidden;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+        }
+        .card-Image img{
+            width: 100%;
+            height: 160px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            object-fit: cover;
+
+        }
+        .profile-Image img{
+            z-index: 1;
+            width: 120px;
+            height: 120px;
+            position: relative;
+            margin-top: -80px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 100px;
+            border: 10px solid #fff;
+            transition-duration: .4s;
+            transition-property: transform;
+        }
+        .profile-Image img:hover{
+            transform: scale(1.1);
+        }
+        .card-content h3{
+            font-size: 25px;
+            text-align: center;
+            padding-top: 3px;
+            margin: 0;
+        }
+        .card-content p{
+            font-size: 16px;
+            text-align: justify;
+        }
+        .card-content p span{
+            padding-left: 5px;
+            padding-right: 5px;
+            font-weight: bold;
+        }
+        .icons{
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 30px;
+        }
+        .icons a{
+            text-decoration: none;
+            font-size: 20px;
+            color: #0abde3;
+            padding: 0 14px;
+            transition-duration: .4s;
+            transition-property: transform;
+        }
+        .icons a:hover{
+            color: #000;
+            transform: scale(1.4);
         }
     </style>
 </head>
-
 <body>
-    <!-- Main Content -->
-    <div class="container p-3 my-5 bg-light border border-primary">
-        <!-- DataTable Code starts -->
-
-        <h1>রিজার্ভ অফিস, নোয়াখালী।</h1>
-        <h3>আজকের ডিউটি</h3>
-        <h3>তারিখ: <span id="date-today"></span></p></h3>
-        <table id="example" class="table table-striped nowrap" style="width:100%">
-            <thead>
-                <tr>
-                    <th><a href="index.html">Home</a></th>
-                    <th>শাখা</th>
-                    <th>পদবি</th>
-                    <th>নাম</th>
-                    <th>বিপি</th>
-                    <th>পদ</th>
-                    <th>মোবাইল</th>
-                    <th>নিজ থানা ও জেলা</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!----- এর উপরে কাজ করার দরকার নাই নিচে এড করতে হবে------->
-             <!--
-                <tr>
-                    <td><a href="index.html">Home</a></td>
-                    <td>তারিখ</td>
-                    <td>সারক</td>
-                    <td>অভ্যন্তরীণ বদলি বার্তা</td>
-                    <td>জন</td>
-                    <td></td>
-                    <td><a href="লিংক">download</a></td>
-                    <td>onesectionnkl@gmail.com</td>
-                </tr>
-            -->
-
-            <tr class="hide">
-                <td>ক্রম</td>
-                <td>শাখা</td>
-                <td>পদবি</td>
-                <td>নাম</td>
-                <td>বিপি</td>
-                <td>পদ</td>
-                <td>0মোবাইল</td>
-                <td>নিজ থানা ও জেলা</td>
-                </tr>
-                <tr class="hide">
-                <td>261</td>
-                <td>আরও-১ শাখা</td>
-                <td>কনস্টেবল</td>
-                <td>মোঃ তৌহিদুল ইসলাম</td>
-                <td>9920229921</td>
-                <td>অপারেটর</td>
-                <td>01641663596</td>
-                <td>পেকুয়া, কক্সবাজার</td>
-                </tr>
-                <tr class="active">
-                <td>508</td>
-                <td>আরও-১ শাখা</td>
-                <td>কনস্টেবল</td>
-                <td>মোঃ মহিউদ্দীন</td>
-                <td>9211129153</td>
-                <td>এলসি</td>
-                <td>01622495768</td>
-                <td>ব্রাহ্মণপাড়া, কুমিল্লা</td>
-                </tr>
-                <tr class="hide">
-                <td>726</td>
-                <td>বেতন শাখা</td>
-                <td>কনস্টেবল</td>
-                <td>মোহাম্মদ নয়ন</td>
-                <td>0020229648</td>
-                <td>অপারেটর</td>
-                <td>01606708051</td>
-                <td>কুতুবদিয়া, কক্সবাজার</td>
-                </tr>
-                <tr class="hide">
-                <td>524</td>
-                <td>সার্ভিস শাখা</td>
-                <td>কনস্টেবল</td>
-                <td>মোঃ মামুন-অর-রশিদ</td>
-                <td>9717200690</td>
-                <td>এলসি</td>
-                <td>01859125214</td>
-                <td>চান্দিনা, কুমিল্লা</td>
-                </tr>
-                <tr class="hide">
-                <td>11</td>
-                <td>সার্ভিস শাখা</td>
-                <td>কনস্টেবল</td>
-                <td>মোঃ রবিউল আউয়াল</td>
-                <td>8908119584</td>
-                <td>এলসি</td>
-                <td>01732193190</td>
-                <td>ফরিদগঞ্জ, চাঁদপুর</td>
-                </tr>
-                <tr class="hide">
-                <td>1216</td>
-                <td>সার্ভিস শাখা</td>
-                <td>কনস্টেবল</td>
-                <td>মোঃ নাঈম উর রহমান</td>
-                <td>0120233364</td>
-                <td>অপারেটর</td>
-                <td>01642754364</td>
-                <td>চাঁদপুর সদর, চাঁদপুর</td>
-                </tr>
-                <tr class="hide">
-                <td>1240</td>
-                <td>পেনশ ও সমন</td>
-                <td>কনস্টেবল</td>
-                <td>মোহাম্মদ শাকিল তালুকদার</td>
-                <td>9918213363</td>
-                <td>এলসি</td>
-                <td>01875737151</td>
-                <td>আনোয়ারা, চট্টগ্রাম</td>
-                </tr>
-                <tr class="hide">
-                <td>1137</td>
-                <td>প্রসিডিং শাখা</td>
-                <td>কনস্টেবল</td>
-                <td>মোঃ ওমর ফারুক</td>
-                <td>9817198532</td>
-                <td>এলসি</td>
-                <td>01865235791</td>
-                <td>লংগদু, রাঙ্গামাটি</td>
-                </tr>
-                <tr class="hide">
-                <td>1131</td>
-                <td>ছুটি ও কল্যাণ শাখা</td>
-                <td>কনস্টেবল</td>
-                <td>মোঃ খোরশেদ আলম</td>
-                <td>9717198531</td>
-                <td>এলসি</td>
-                <td>01861842826</td>
-                <td>মতলব উত্তর, চাঁদপুর</td>
-                </tr>
-                <tr class="hide">
-                <td>1026</td>
-                <td>পিআইএমএস শাখা</td>
-                <td>কনস্টেবল</td>
-                <td>মোঃ নাঈম ভূঁইয়া</td>
-                <td>9418219909</td>
-                <td>অপারেটর</td>
-                <td>01775424175</td>
-                <td>আশুগঞ্জ, ব্রাহ্মণবাড়িয়া</td>
-                </tr>
-                <tr class="hide">
-                <td>922</td>
-                <td>ডিও শাখা</td>
-                <td>কনস্টেবল</td>
-                <td>মিজানুর রহমান</td>
-                <td>9818219249</td>
-                <td>এলসি</td>
-                <td>01843943125</td>
-                <td>চান্দিনা, কুমিল্লা</td>
-                </tr>
-                
-               
-                <!-- 1 রু হাইড করে রাখলাম
-                <tr>
-                    <td>Home</td>
-                    <td>Liang</td>
-                    <td>Support Engineer</td>
-                    <td>Singapore</td>
-                    <td>64</td>
-                    <td>2011-02-03</td>
-                    <td>$234,500</td>
-                    <td>2120</td>
-                    <td>o.liang@datatables.net</td>
-                </tr>
-                -->
-               
-            </tbody>
-        </table>
+    <div class="container">
+        <a href="index.html" class="fab fa-home">রিজার্ভ অফিস, নোয়াখালী।</a>
+        <h4>অফিস ডিউটি</h4>       
+        <h5>তারিখ: <samp id="date-today"></samp></h5>
+    </div>
+    <div class="person">
+        <div class="card">
+            <div class="card-Image">
+                <img src="images/pbg.jpg" alt="">
+            </div>
+            <div class="profile-Image">
+                <img src="images/261.jpg" alt="">
+            </div>
+            <div class="card-content">
+                <h3>মোঃ তৌহিদুল ইসলাম</h3>
+                <p><span class="">পদবি:</span>কনস্টেবল</p>
+                <p><span class="">ব্রাশ নম্বর:</span>২৬১</p>
+                <p><span class="">বিপি:</span>9920229921</p>
+                <p><span class="">কর্মরত শাখা:</span>আরও-১ শাখা</p>
+                <p><span class="">পদ:</span>অপারেটর</p>
+                <p><span class="">মোবাইল নম্বর:</span>01641663596</p>
+                <p><span class="">নিজ থানা ও জেলা:</span>পেকুয়া, কক্সবাজার</p>
+    
+            </div>
+            <div class="icons">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-youtube"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-whatsapp"></a>
+            </div>
+        </div>
     </div>
 
-    <!-- DataTable JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap5.min.js"></script>
+    <div class="person1">
+        <div class="card">
+            <div class="card-Image">
+                <img src="images/pbg.jpg" alt="">
+            </div>
+            <div class="profile-Image">
+                <img src="images/508.jpg" alt="">
+            </div>
+            <div class="card-content">
+                <h3>মোঃ মহিউদ্দীন</h3>
+                <p><span class="">পদবি:</span>কনস্টেবল</p>
+                <p><span class="">ব্রাশ নম্বর:</span>৫০৮</p>
+                <p><span class="">বিপি:</span>9211129153</p>
+                <p><span class="">কর্মরত শাখা:</span>আরও-১ শাখা</p>
+                <p><span class="">পদ:</span>এলসি</p>
+                <p><span class="">মোবাইল নম্বর:</span>01622495768</p>
+                <p><span class="">নিজ থানা ও জেলা:</span>ব্রাহ্মণপাড়া, কুমিল্লা</p>
+    
+            </div>
+            <div class="icons">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-youtube"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-whatsapp"></a>
+            </div>
+        </div>
+    </div>
     <script>
         let dateToday = document.getElementById("date-today");
         let today = new Date();
@@ -213,9 +178,6 @@
 
         dateToday.textContent =`${day}/${month}/${year}`;
     </script>
-
-    <!-- Custom JS -->
-    <script src="script.js"></script>
+    
 </body>
-
 </html>
