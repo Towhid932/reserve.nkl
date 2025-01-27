@@ -29,6 +29,7 @@
 
         <h1>রিজার্ভ অফিস, নোয়াখালী।</h1>
         <h3>আজকের ডিউটি</h3>
+        <h3>তারিখ: <p id="date">/</p></h3>
         <table id="example" class="table table-striped nowrap" style="width:100%">
             <thead>
                 <tr>
@@ -203,6 +204,10 @@
     <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap5.min.js"></script>
+    <script>
+const d = new Date();
+document.getElementById("date").innerHTML = d;
+</script>
 
     <!-- Custom JS -->
     <script src="script.js"></script>
