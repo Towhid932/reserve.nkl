@@ -29,7 +29,7 @@
 
         <h1>রিজার্ভ অফিস, নোয়াখালী।</h1>
         <h3>আজকের ডিউটি</h3>
-        <h3>তারিখ: <p id="date"></p></h3>
+        <h3>তারিখ: <span id="date-today"></span></p></h3>
         <table id="example" class="table table-striped nowrap" style="width:100%">
             <thead>
                 <tr>
@@ -205,9 +205,14 @@
     <script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap5.min.js"></script>
     <script>
-const d = new Date();
-document.getElementById("date").innerHTML = d;
-</script>
+        let dateToday = document.getElementById("date-today");
+        let today = new Date();
+        let day = `${today.getDate()<10? "0":""}${today.getDate()}`;
+        let month = `${(today.getMonth()+1)<10? "0":""}${today.getMonth()+1}`;
+        let year = today.getFullYear();
+
+        dateToday.textContent =`${day}/${month}/${year}`;
+    </script>
 
     <!-- Custom JS -->
     <script src="script.js"></script>
