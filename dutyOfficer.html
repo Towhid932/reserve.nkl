@@ -27,29 +27,38 @@
             color: #924eb1;
             padding: 0 14px;
         }
- .container h4{
+  	.text{
+  		height: 20px;
+  		display: flex;
+  		align-items: center;
+  		justify-content: center;
+  	}
+h4{
 	font-size: 20px;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	
+	text-align: center;
+
 }
-.container h4{
+h4{
 	color: transparent;
-	-webkit-text-stroke: 3px darkmagenta;
+	-webkit-text-stroke: 1px black;
 	position: relative;
+
 }
-.container h4::before{
+h4::before{
 	content: "অফিস ডিউটি";
 	position: absolute;
 	width: 0%;
 	height: 100%;
 	overflow: hidden;
 	color: darkmagenta;
-	border-right: 8px solid darkmagenta;
+	border-right: 2px solid black;
 	transition: 1s ease-in-out;
 }
-.container h4:hover::before{
-	width: 50%;
-	filter: drop-shadow(0 0 10px darkmagenta);
+h4:hover::before{
+	width: 100%;
+	filter: drop-shadow(0 0 2px black);
+
 }
 
         h5{
@@ -140,7 +149,9 @@
 <body>
     <div class="container">
         <a href="index.html" class="fab fa-home">রিজার্ভ অফিস, নোয়াখালী।</a>
-        <h4 data-text="অফিস ডিউটি">অফিস ডিউটি...</h4>       
+        <div class="text">
+		<h4>অফিস ডিউটি</h4>
+	</div>      
         <h5>তারিখ: <samp id="date-today"></samp></h5>
     </div>
     <div class="person">
