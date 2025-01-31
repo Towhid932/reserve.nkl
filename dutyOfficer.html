@@ -27,37 +27,31 @@
             color: #924eb1;
             padding: 0 14px;
         }
-        .container h4{
-        position: relative;
-    	font-size: 4vw;
-    	color: #252839;
-    	-webkit-text-stroke: 0.3vw #383d52;
-    	text-transform: uppercase;
-         }
-    .container h4::before{
-	content: attr(data-text);
+ .container h4{
+	font-size: 5rem;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	
+}
+.container h4{
+	color: transparent;
+	-webkit-text-stroke: 3px darkmagenta;
+	position: relative;
+}
+.container h4::before{
+	content: "অফিস ডিউটি";
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 0;
+	width: 0%;
 	height: 100%;
-	color: #01FE87;
-	-webkit-text-stroke: 0vw #383d52;
-	border-right: 3px solid #01fe87;
 	overflow: hidden;
-	animation: animate 8s linear infinite;
+	color: darkmagenta;
+	border-right: 8px solid darkmagenta;
+	transition: 1s ease-in-out;
 }
-@keyframes animate
-{
-	0%,10%,100%
-	{
-		width: 0;
-	}
-	70%,90%
-	{
-		width: 100%;
-	}
+.container h4:hover::before{
+	width: 50%;
+	filter: drop-shadow(0 0 20px darkmagenta);
 }
+
         h5{
             padding: 0;
             margin: 0;
