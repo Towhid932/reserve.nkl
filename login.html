@@ -234,9 +234,9 @@ h1 {
                 <img src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png" alt="illustration" class="illustration" />
                 <h1 class="opacity">Admin Login</h1>
                 <form>
-                    <input type="text" placeholder="User Name" />
-                    <input type="password" placeholder="Password" />
-                    <button class="opacity">LOGIN</button>
+                    <input id="myInput" type="text" placeholder="User Name" />
+                    <input id="myInputPass" type="password" placeholder="Password" />
+                    <button onclick="myFunction() class="opacity">LOGIN</button>
                 </form>
                 <div class="register-forget opacity">
                     <a href="">REGISTER</a>
@@ -249,6 +249,25 @@ h1 {
     </section>
 </body>
 <!-- partial -->
+  function myFunction(){
+			var letter=document.getElementById("myInput").value;
+			var pass=document.getElementById("myInputPass").value;
+			
+			var text;
+
+			if(letter==="Towhid"&& pass==="123"){
+				document.location.href="https://docs.google.com/spreadsheets/d/1ArK78vpOy1Av7Ei6tirJqRvI0r_W6fmV6ORlHkuA3Nk/edit?usp=sharing"
+			}
+			else if(letter==="a"||letter==="b"||letter==="c") {
+				text=letter+"When User Input Currect then Your going another Page.....";
+			}else if(letter==="1"||letter==="2"){
+				text="Close,but not Close enough.<br>You are type: 1 or 2";
+			}else{
+				text=letter+" Plase Enter Currect Input User ID";
+			}
+
+		}
+		
   <script  src="./script.js"></script>
 
 </body>
