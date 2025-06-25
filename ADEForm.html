@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADE Form | CodingLab </title>
+  <link rel="stylesheet" href="css/style_ADEForm.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Title section -->
+    <div class="title">জেলা অভ্যন্তরীণ বদলি এন্ট্রি</div>
+    <div class="content">
+      <!-- Registration form -->
+      <form name="submit-to-google-sheet" action="#">
+        <div class="user-details">
+
+          <!-- Input for Phone Number -->
+          <div class="input-box">
+            <span class="details">বদলির সাল ও বার্তা নম্বর *</span>
+            <input name="বার্তা নম্বর"type="text" placeholder="সাল/বার্তা নম্বর: 25/1080" required>
+          </div>
+
+          <!-- Input for Phone Number -->
+          <div class="input-box">
+            <span class="details">যোগদান/প্রস্থানকৃত ইউনিটের নাম *</span>
+            <select name="প্রস্থান/যোগদান ইউনিট" class="input-box" required>
+              <option value="Select" disabled selected>-থানা/ইউনিট-</option>
+              <option value="সুধারাম মডেল থানা">সুধারাম মডেল থানা</option>
+              <option value="বেগমগঞ্জ মডেল থানা">বেগমগঞ্জ মডেল থানা</option>
+              <option value="চাটখিল থানা">চাটখিল থানা</option>
+              <option value="সোনাইমুরি থানা">সোনাইমুরি থানা</option>
+              <option value="সেনবাগ থানা">সেনবাগ থানা</option>
+              <option value="কোম্পানীগঞ্জ থানা">কোম্পানীগঞ্জ থানা</option>
+              <option value="কবিরহাট থানা">কবিরহাট থানা</option>
+              <option value="চরজব্বার থানা">চরজব্বার থানা</option>
+              <option value="হাতিয়া থানা">হাতিয়া থানা</option>
+              <option value="ভাসানচর থানা">ভাসানচর থানা</option>
+              <option value="ডিবি">ডিবি</option>
+              <option value="ডিএসবি">ডিএসবি</option>
+              <option value="সদর কোর্ট">সদর কোর্ট</option>
+              <option value="হাতিয়া কোর্ট">হাতিয়া কোর্ট</option>
+              <option value="মোর্শেদ বাজার তদন্ত কেন্দ্র">মোর্শেদ বাজার তদন্ত কেন্দ্র</option>
+              <option value="জাহাজমারা তদন্ত কেন্দ্র">জাহাজমারা তদন্ত কেন্দ্র</option>
+              <option value="নিঝুমদ্বীপ তদন্ত কেন্দ্র">নিঝুমদ্বীপ তদন্ত কেন্দ্র</option>
+              <option value="খিলপাড়া তদন্ত কেন্দ্র">খিলপাড়া তদন্ত কেন্দ্র</option>
+              <option value="কেরিংচর তঃ কেন্দ্র">কেরিংচর তঃ কেন্দ্র</option>
+              <option value="সদর ফাঁড়ি">সদর ফাঁড়ি</option>
+              <option value="চৌমুহনী ফাঁড়ি">চৌমুহনী ফাঁড়ি</option>
+              <option value="চরজব্বর পুলিশ ফাঁড়ি">চরজব্বর পুলিশ ফাঁড়ি</option>
+              <option value="সাগরিয়া পুলিশ ফাঁড়ি">সাগরিয়া পুলিশ ফাঁড়ি</option>
+              <option value="তমরুদ্দি পুলিশ ফাঁড়ি">তমরুদ্দি পুলিশ ফাঁড়ি</option>
+              <option value="নলচিরা নৌ পুলিশ ফাঁড়ি">নলচিরা নৌ পুলিশ ফাঁড়ি</option>
+              <option value="সদর ট্রাফিক">সদর ট্রাফিক</option>
+              <option value="চৌমুহনী ট্রাফিক">চৌমুহনী ট্রাফিক</option>
+              <option value="সেনবাগ ট্রাফিক">সেনবাগ ট্রাফিক</option>
+              <option value="সোনাইমুরি ট্রাফিক">সোনাইমুরি ট্রাফিক</option>
+              <option value="কোম্পানীগঞ্জ ট্রাফিক">কোম্পানীগঞ্জ ট্রাফিক</option>
+              <option value="চেয়ারম্যানঘাট পুলিশ ক্যাম্প">চেয়ারম্যানঘাট পুলিশ ক্যাম্প</option>
+              <option value="ছনখোলা পুলিশ ক্যাম্প">ছনখোলা পুলিশ ক্যাম্প</option>
+              <option value="চরবালুয়া পুলিশ (উড়িরচর) ক্যাম্প">চরবালুয়া পুলিশ (উড়িরচর) ক্যাম্প</option>
+              <option value="রাজগঞ্জ বাজার ক্যাম্প">রাজগঞ্জ বাজার ক্যাম্প</option>
+              <option value="মাঈনুদ্দিন বাজার ক্যাম্প">মাঈনুদ্দিন বাজার ক্যাম্প</option>
+              <option value="সদর সার্কেল অফিস">সদর সার্কেল অফিস</option>
+              <option value="বেগমগঞ্জ সার্কেল অফিস">বেগমগঞ্জ সার্কেল অফিস</option>
+              <option value="চাটখিল সার্কেল অফিস">চাটখিল সার্কেল অফিস</option>
+              <option value="হাতিয়া সার্কেল অফিস">হাতিয়া সার্কেল অফিস</option>
+              <option value="পুলিশ সুপারের কার্যালয়">পুলিশ সুপারের কার্যালয়</option>
+              <option value="অর্থ/প্রশাসন">অর্থ/প্রশাসন</option>
+              <option value="অপরাধ শাখা">অপরাধ শাখা</option>
+              <option value="মহিলা পুলিশ">মহিলা পুলিশ</option>
+              <option value="ক্রাইম প্রিভেনশন এন্ড কমিউনিটি পুলিশিং">ক্রাইম প্রিভেনশন এন্ড কমিউনিটি পুলিশিং</option>
+              <option value="রিজার্ভ অফিস">রিজার্ভ অফিস</option>
+              <option value="পুলিশ লাইন">পুলিশ লাইন</option>
+              <option value="এমটি">এমটি</option>
+              <option value="রেশন স্টোর">রেশন স্টোর</option>
+              <option value="ক্লোথিং স্টোর">ক্লোথিং স্টোর</option>
+              <option value="অস্ত্রাগার">অস্ত্রাগার</option>
+              <option value="ব্যান্ড গ্রুপ">ব্যান্ড গ্রুপ</option>
+              <option value="পুলিশ হাসপাতাল">পুলিশ হাসপাতাল</option>
+              <option value="ইন-সার্ভিস ট্রেনিং">ইন-সার্ভিস ট্রেনিং</option>
+              <option value="পুলিশ কন্ট্রোল রুম">পুলিশ কন্ট্রোল রুম</option>
+              <option value="রিজার্ভ সাময়িক বরখাস্ত">রিজার্ভ সাময়িক বরখাস্ত</option>
+              <option value="ইউমেন সাপোর্ট সেন্টার">ইউমেন সাপোর্ট সেন্টার</option>
+              <option value="রিজার্ভ লাইন ওয়ার">রিজার্ভ লাইন ওয়ার</option>
+              <option value="পুলিশ লাইন্স ড্রাইভার">পুলিশ লাইন্স ড্রাইভার</option>
+              <option value="ডিপার্টামেন্টাল স্টোর">ডিপার্টামেন্টাল স্টোর</option>
+            </select>
+          </div>
+
+          <!-- Input for Phone Number -->
+          <div class="input-box">
+            <span class="details">স্ট্যাটাস *</span>
+            <select name="স্ট্যাটাস" class="input-box" required>
+              <option hidden>স্ট্যাটাস</option>
+              <option>যোগদান</option>
+              <option>প্রস্থান</option>
+            </select>
+          </div>
+
+          <!-- Input for Full Name -->
+          <div class="input-box">
+            <span class="details">প্রস্থান/যোগদান তারিখ *</span>
+            <input name="প্রস্থান/যোগদান তারিখ" type="date" placeholder="প্রস্থান/যোগদান তারিখ" required>
+          </div>
+
+          <!-- Input for  -->
+          <div class="input-box">
+            <span class="details">BP Number *</span>
+            <input name="বিপি" type="text" minlength=12 maxlength=12 placeholder="বিপি নমুনা BP1234567890" required>
+          </div>
+
+           <!-- Input for Phone Number -->
+           <div class="input-box">
+            <span class="details">পদবি *</span>
+            <select name="পদবি" class="input-box" required>
+              <option hidden>পদবি বাচাই করুন</option>
+              <option value="কনস্টেবল">কনস্টেবল</option>
+              <option value="নায়েক">নায়েক</option>
+              <option value="এএসআই (নিরস্ত্র)">এএসআই (নিরস্ত্র)</option>
+              <option value="এএসআই (সশস্ত্র)">এএসআই (সশস্ত্র)</option>
+              <option value="এটিএসআই">এটিএসআই</option>              
+              <option value="এসআই (নিরস্ত্র)">এসআই (নিরস্ত্র)</option>
+              <option value="এসআই (সশস্ত্র)">এসআই (সশস্ত্র)</option>
+              <option value="সার্জেন্ট">সার্জেন্ট</option>
+              <option value="টিএসআই">টিএসআই</option>
+            </select>
+          </div>
+
+           <!-- Input for Full Name -->
+           <div class="input-box">
+            <span class="details">নাম*</span>
+            <input name="নাম"type="text" placeholder="নাম বাংলায় লিখুন" required>
+          </div>
+
+          <!-- Input for Full Name -->
+          <div class="input-box">
+            <span class="details">ব্রাশ নম্বর</span>
+            <input name="ব্রাশ নম্বর" type="text" placeholder="যাদের ক্ষেত্রে প্রযোয্য">
+          </div>
+          
+          <!-- Input for Phone Number -->
+          <div class="input-box">
+            <span class="details">ধরণ *</span>
+            <select name="ধরণ"class="input-box" required>
+              <option hidden>ধরণ</option>
+              <option>বদলি</option>
+              <option>সংযুক্তি</option>
+            </select>
+          </div>
+
+          <div class="input-box">
+            <label>মন্তব্য</label>
+            <input name="মন্তব্য"type="text" placeholder="বাংলায় লিখুন (যদি থাকে)" />
+          </div>
+
+        </div>
+        <!-- Submit button -->
+        <div class="button">
+          <input id="submit" type="submit" value="Save">
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+  <script>
+        const result=document.getElementById("result")
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwLm6XxK-iTpkFQHj4rT16N_PeAMSWTA-RAP8_SwWR-IZIVKgnMICEjh4BOGJxKJz_JaA/exec'
+      const form = document.forms['submit-to-google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then(response => alert('ধন্যবাদ!!! আপনার যোগদান/প্রস্থান জনিত তথ্যসমূহ জমা হয়েছে।!!✌️✌️', response))
+          
+          .catch(error => console.error('Error!', error.message))
+          alert("আপনার যোগদান/প্রস্থান তথ্য সমূহ সঠিক? সঠিক থাকলে OK বাটনে ক্লিক করুন",form.reset())
+         
+      })
+    </script>
+</body>
+</html>
