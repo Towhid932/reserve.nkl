@@ -29,30 +29,41 @@ body {
 .container .title {
   font-size: 25px;
   font-weight: 500;
+  text-align: center;
   position: relative;
 }
-
 .container .title::before {
   content: "";
   position: absolute;
-  left: 0;
+  align-items: center;
   bottom: 0;
   height: 3px;
-  width: 30px;
+  width: 46%;
   border-radius: 5px;
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.container .title::after {
+  content: "(* ফিল্ড অবশ্যই পূরণ করতে হবে)";
+  position: absolute;
+  align-items: center;
+  bottom: 5px;
+  right: 5px;
+  font-size: 10px;
 }
 
 .content form .user-details {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 20px 0 12px 0;
+  margin: 15px 0 10px 0;
 }
 
 form .user-details .input-box {
-  margin-bottom: 10px;
+  padding: 1px 5px;
+  margin-bottom: 7px;
   width: calc(100% / 2 - 20px);
+  border: rgb(219, 209, 209) dotted ;
+  border-radius: 10px;
 }
 
 form .input-box span.details {
@@ -60,8 +71,11 @@ form .input-box span.details {
   font-weight: 500;
   margin-bottom: 5px;
 }
+form .input-box span.details  .starFild{
+  color: red;
+}
 
-.user-details .input-box input, select {
+.user-details .input-box input {
   height: 30px;
   width: 100%;
   outline: none;
@@ -76,6 +90,18 @@ form .input-box span.details {
 .user-details .input-box input:focus,
 .user-details .input-box input:valid {
   border-color: #9b59b6;
+}
+
+.user-details .input-box select {
+  height: 30px;
+  width: 100%;
+  outline: none;
+  font-size: 12px;
+  border-radius: 5px;
+  padding-left: 10px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
 }
 
 
