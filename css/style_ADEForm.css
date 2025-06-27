@@ -66,6 +66,13 @@ form .user-details .input-box {
   border-radius: 10px;
 }
 
+.content form .user-details .postinDate-box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 5px 0 5px 0;
+}
+
 form .input-box span.details {
   display: block;
   font-weight: 500;
@@ -121,13 +128,19 @@ form .category label {
 
 form .button {
   height: 45px;
-  margin: 35px 0
+  margin: 5px 0;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
 }
 
 form .button input {
   height: 100%;
-  width: 100%;
+  padding: 0 35px;
   border-radius: 5px;
+  text-align: center;
   border: none;
   color: #fff;
   font-size: 15px;
@@ -138,8 +151,12 @@ form .button input {
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 
-form .button input:hover {
-  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+form .button input:nth-child(2):hover {
+  background: linear-gradient(-135deg, #0b22ef, #9b59b6);
+  border: forestgreen solid;
+}
+form .button input:nth-child(3):hover {
+  background: linear-gradient(-135deg, #f63636, #9b59b6);
 }
 
 /* Responsive media query code for mobile devices */
@@ -172,4 +189,16 @@ form .button input:hover {
   .container .content .category {
     flex-direction: column;
   }
+  .container .title {
+  font-size: 20px;
+}
+.container .title::before {
+  width: 85%;
+}
+.container .title::after {
+  top: 35px;
+  right: 5px;
+  font-size: 7px;
+  color: red;
+}
 }
