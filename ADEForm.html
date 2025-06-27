@@ -15,10 +15,20 @@
       <form name="submit-to-google-sheet" action="#">
         <div class="user-details">
 
-          <!-- Input for Phone Number -->
+          <!-- Input for posting NO & Date -->
           <div class="input-box">
-            <span class="details">বদলির সাল ও বার্তা নম্বর <span class="starFild">*</span></span>
-            <input name="বার্তা নম্বর"type="text" placeholder="সাল/বার্তা নম্বর: 25/1080" required>
+            <div class="postinDate-box">
+              <div class="postinItem">
+                <span class="details">বদলির স্মারক <span class="starFild">*</span></span>
+                <input name="বদলির স্মারক" type="number"  placeholder="বদলির বার্তা/স্মারক নং" required>
+              </div>
+              <div class="postinItem">
+                <span class="details">বদলির তারিখ <span class="starFild">*</span></span>
+                <input name="বদলির তারিখ" type="date"  placeholder="বদলির বার্তা/স্মারক তারিখ" min="2024-01-01" max="2025-12-31" required>
+              </div>
+             
+
+            </div>
           </div>
 
           <!-- Input for Phone Number -->
@@ -82,9 +92,10 @@
               <option value="পুলিশ কন্ট্রোল রুম">পুলিশ কন্ট্রোল রুম</option>
               <option value="রিজার্ভ সাময়িক বরখাস্ত">রিজার্ভ সাময়িক বরখাস্ত</option>
               <option value="ইউমেন সাপোর্ট সেন্টার">ইউমেন সাপোর্ট সেন্টার</option>
-              <option value="রিজার্ভ লাইন ওয়ার">রিজার্ভ লাইন ওয়ার</option>
+              <option value="বহি জেলার জন্য রিজার্ভ অফিস">বহি জেলার জন্য রিজার্ভ অফিস</option>
               <option value="পুলিশ লাইন্স ড্রাইভার">পুলিশ লাইন্স ড্রাইভার</option>
               <option value="ডিপার্টামেন্টাল স্টোর">ডিপার্টামেন্টাল স্টোর</option>
+              <option value="লাইন ও আর">লাইন ও আর</option>
             </select>
           </div>
 
@@ -101,7 +112,7 @@
           <!-- Input for Full Name -->
           <div class="input-box">
             <span class="details">প্রস্থান/যোগদান তারিখ <span class="starFild">*</span></span>
-            <input name="প্রস্থান/যোগদান তারিখ" type="date" placeholder="প্রস্থান/যোগদান তারিখ" required>
+            <input name="প্রস্থান/যোগদান তারিখ" type="date" placeholder="প্রস্থান/যোগদান তারিখ" min="2024-01-01" max="2025-12-31" required>
           </div>
 
           <!-- Input for  -->
@@ -157,7 +168,9 @@
         </div>
         <!-- Submit button -->
         <div class="button">
-          <input id="submit" type="submit" value="Save">
+          <input id="submit" type="hidden" value="List">
+          <input id="submit" type="submit" value="SAVE">
+          <input id="submit" type="reset" value="Reset">
         </div>
       </form>
     </div>
