@@ -188,6 +188,7 @@ form .button input:nth-child(3):hover {
 @media(max-width: 459px) {
   .container {
   padding: 20px;
+  height: 100℅;
 }
   .container .content .category {
     flex-direction: column;
