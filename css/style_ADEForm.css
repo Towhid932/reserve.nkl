@@ -201,4 +201,14 @@ form .button input:nth-child(3):hover {
   font-size: 7px;
   color: red;
 }
+.content form .user-details {
+  margin: 15px 0 10px 0;
+  font-size: 12px;
+}
+.user-details .input-box select {
+  font-size: 12px;
+}
+.user-details .input-box input {
+  font-size: 11px;
+}
 }
