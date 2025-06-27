@@ -186,6 +186,9 @@ form .button input:nth-child(3):hover {
 
 /* Responsive media query code for mobile devices */
 @media(max-width: 459px) {
+  .container {
+  padding: 20px;
+}
   .container .content .category {
     flex-direction: column;
   }
