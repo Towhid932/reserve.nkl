@@ -127,10 +127,10 @@ form .category label {
 
 
 form .button {
-  height: 45px;
+  height: 40px;
   margin: 5px 0;
   display: flex;
-  gap: 5px;
+  gap: 3px;
   flex-wrap: wrap;
   justify-content: space-around;
 
@@ -138,7 +138,7 @@ form .button {
 
 form .button input {
   height: 100%;
-  padding: 0 35px;
+  padding: 0 20px;
   border-radius: 5px;
   text-align: center;
   border: none;
@@ -150,13 +150,25 @@ form .button input {
   transition: all 0.3s ease;
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
-
+form .button input:nth-child(1) {
+  background: linear-gradient(-135deg, #f65a5a, #f40707);
+}
+form .button input:nth-child(1):hover {
+  background: linear-gradient(-135deg, #3647e1, #f40707);
+  border: forestgreen solid;
+}
 form .button input:nth-child(2):hover {
   background: linear-gradient(-135deg, #0b22ef, #9b59b6);
   border: forestgreen solid;
 }
 form .button input:nth-child(3):hover {
   background: linear-gradient(-135deg, #f63636, #9b59b6);
+}
+form .button input:nth-child(4) {
+  background: linear-gradient(-135deg, #9ce16b, #a2ff00);
+}
+form .button input:nth-child(4):hover {
+  border: forestgreen solid;
 }
 
 /* Responsive media query code for mobile devices */
