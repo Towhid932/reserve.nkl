@@ -20,11 +20,11 @@
             <div class="postinDate-box">
               <div class="postinItem">
                 <span class="details">বদলির স্মারক <span class="starFild">*</span></span>
-                <input name="বদলির স্মারক" type="number"  placeholder="বদলির বার্তা/স্মারক নং" required>
+                <input id="postingOrder-input" onchange="test()"  name="বদলির স্মারক" type="number"  placeholder="বদলির বার্তা/স্মারক নং" required>
               </div>
               <div class="postinItem">
                 <span class="details">বদলির তারিখ <span class="starFild">*</span></span>
-                <input name="বদলির তারিখ" type="date"  placeholder="বদলির বার্তা/স্মারক তারিখ" min="2024-01-01" max="2025-12-31" required>
+                <input id="postingOrderDate-input" onchange="test()" name="বদলির তারিখ" type="date"  placeholder="বদলির বার্তা/স্মারক তারিখ" min="2024-01-01" max="2025-12-31" required>
               </div>
              
 
@@ -34,7 +34,7 @@
           <!-- Input for Phone Number -->
           <div class="input-box">
             <span class="details">যোগদান/প্রস্থানকৃত ইউনিটের নাম <span class="starFild">*</span></span>
-            <select name="প্রস্থান/যোগদান ইউনিট" class="input-box" required>
+            <select id="unitList" onchange="test()" name="প্রস্থান/যোগদান ইউনিট" class="input-box" required>
               <option value="">-select-</option>
               <option value="সুধারাম মডেল থানা">সুধারাম মডেল থানা</option>
               <option value="বেগমগঞ্জ মডেল থানা">বেগমগঞ্জ মডেল থানা</option>
@@ -102,7 +102,7 @@
           <!-- Input for Phone Number -->
           <div class="input-box">
             <span class="details">স্ট্যাটাস <span class="starFild">*</span></span>
-            <select name="স্ট্যাটাস" class="input-box" required>
+            <select id="optionList" onchange="test()" name="স্ট্যাটাস" class="input-box"  required>
               <option value="">-select-</option>
               <option>যোগদান</option>
               <option>প্রস্থান</option>
@@ -118,7 +118,7 @@
           <!-- Input for  -->
           <div class="input-box">
             <span class="details">BP Number <span class="starFild">*</span></span>
-            <input name="বিপি" type="text" minlength=12 maxlength=12 placeholder="বিপি নমুনা BP9413567890" required>
+            <input id="bpInput" onchange="test()" name="বিপি" type="text" minlength=12 maxlength=12 placeholder="বিপি নমুনা BP9413567890" required>
           </div>
 
            <!-- Input for Phone Number -->
@@ -153,7 +153,7 @@
           <!-- Input for Phone Number -->
           <div class="input-box">
             <span class="details">ধরণ <span class="starFild">*</span></span>
-            <select name="ধরণ"class="input-box" required>
+            <select onchange="test()" name="ধরণ"class="input-box" required>
               <option value="">-select-</option>
               <option>বদলি</option>
               <option>সংযুক্তি</option>
@@ -164,6 +164,8 @@
             <label>মন্তব্য</label>
             <input name="মন্তব্য"type="text" placeholder="বাংলায় লিখুন (যদি থাকে)" />
           </div>
+            <input id="inputKey" name="keyID" style="display: none;"></input>
+
 
         </div>
         <!-- Submit button -->
@@ -192,6 +194,26 @@
           alert("আপনার যোগদান/প্রস্থান তথ্য সমূহ সঠিক? সঠিক থাকলে OK বাটনে ক্লিক করুন",form.reset())
          
       })
+
+      
+
+
+      function test(){
+        const stetasInput = document.getElementById('stetasInput')
+        const postingOrderInput = document.getElementById('postingOrder-input')
+        const postingOrderDateInput = document.getElementById('postingOrderDate-input')
+        const postingOrderYear = postingOrderDateInput.value.slice(0,4);
+        const inputKey = document.getElementById('inputKey')
+        var x = document.getElementById("optionList");
+        var y = document.getElementById("unitList");
+        const bpInput = document.getElementById('bpInput')
+
+
+        var select1=x.options[x.selectedIndex].text;
+        var select2=y.options[y.selectedIndex].text;
+
+          inputKey.value = select1+ select2+ postingOrderInput.value +postingOrderYear + bpInput.value;}
+
     </script>
 </body>
 </html>
