@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
-    <title>অভ্যন্তরীণ বদলি সংক্রান্তে</title>
+    <link href="https://fonts.maateen.me/nikosh/font.css" rel="stylesheet">
+    <title>অভ্যন্তরীণ বদলি সম্পন্ন</title>
 
     <style>
         :root {
@@ -13,6 +14,7 @@
   --color-black: #141d28;
   --color-black-1: #212b38;
 }
+@import url('https://fonts.maateen.me/nikosh/font.css');
 
 * {
   margin: 0;
@@ -21,7 +23,8 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Nikosh', sans-serif;
+  
  
 }
 
@@ -126,7 +129,13 @@ table{
 p{
   text-align: center;
 }
-  table, th, td {
+  table th{
+    border:1px solid black;
+    background-color: #0073ff;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  table, td{
     border:1px solid black;
     padding-left: 3px;
     padding-right: 3px;
@@ -214,8 +223,8 @@ p{
       <div class="hero">
         &nbsp;
 
-        <p>রিজার্ভ অফিস, নোয়াখালী।</p>
-        <p>প্রস্থান নেয়নি</p>
+        <p>রিজার্ভ অফিস, নোয়াখালী।</p><br>
+        <p>বদলি সম্পন্ন তালিকা</p><br>
         <table>
 
         </table>
@@ -232,7 +241,7 @@ p{
     </div>
     
     <script>
-            fetch('https://script.google.com/macros/s/AKfycbwz7yulDJv1QZ-JBtKdJFA6KIbKz1MOtdXoIIhZSKUf9B8j7tp5UCoY9jgzzPS4gZ0DBg/exec')
+            fetch('https://script.google.com/macros/s/AKfycbyRwTkr7Cyah68NXJRLeySKZx90ye1JRZn2tXSGM9Gmv8aTXlpr4xatVz8eadKPwZr-Rw/exec')
                 .then(res => res.json())
             .then(data => {
             let tr = data. content. reduce((prev,cur)=>

@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
-    <title>অভ্যন্তরীণ বদলি সংক্রান্তে</title>
+    <link href="https://fonts.maateen.me/bangla/font.css" rel="stylesheet">
+    <title>অভ্যন্তরীণ বদলি সম্পন্ন</title>
 
     <style>
+      @import url('https://fonts.maateen.me/bangla/font.css');
         :root {
   --color-primary: #0073ff;
   --color-white: #e9e9e9;
@@ -21,7 +23,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Bangla', sans-serif;
  
 }
 
@@ -214,8 +216,8 @@ p{
       <div class="hero">
         &nbsp;
 
-        <p>রিজার্ভ অফিস, নোয়াখালী।</p>
-        <p>প্রস্থান নেয়নি</p>
+        <p>রিজার্ভ অফিস, নোয়াখালী।</p><br>
+        <p>যোগদানের জন্য অপেক্ষমান তালিকা</p><br>
         <table>
 
         </table>
@@ -232,7 +234,7 @@ p{
     </div>
     
     <script>
-            fetch('https://script.google.com/macros/s/AKfycbwz7yulDJv1QZ-JBtKdJFA6KIbKz1MOtdXoIIhZSKUf9B8j7tp5UCoY9jgzzPS4gZ0DBg/exec')
+            fetch('https://script.google.com/macros/s/AKfycbzLVyjKynI2Odl3bSIdxeqnZa7MfReU4MnOP_Y8-0lya5lR09S2YJAv1s_2lsanXOncHg/exec')
                 .then(res => res.json())
             .then(data => {
             let tr = data. content. reduce((prev,cur)=>
