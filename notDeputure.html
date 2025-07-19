@@ -221,15 +221,6 @@ p{
         </table>
       </div>
 
-
-
-
-    <div class="container">
-        <p>Today</p>
-        <H3 id="date-today"></H3>
-        <span id="date-today"></span>
-
-    </div>
     
     <script>
             fetch('https://script.google.com/macros/s/AKfycbwz7yulDJv1QZ-JBtKdJFA6KIbKz1MOtdXoIIhZSKUf9B8j7tp5UCoY9jgzzPS4gZ0DBg/exec')
@@ -245,16 +236,6 @@ p{
             console.log(tr);
             });
 
-
-
-
-        let dateToday = document.getElementById("date-today");
-        let today = new Date();
-        let day = `${today.getDate()<10? "0":""}${today.getDate()}`;
-        let month = `${(today.getMonth()+1)<10? "0":""}${today.getMonth()+1}`;
-        let year = today.getFullYear();
-
-        dateToday.textContent =`${day}/${month}/${year}`;
     </script>
     
 </body>
