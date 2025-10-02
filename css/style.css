@@ -246,6 +246,8 @@ button {
      width: 280px;
 }
 
+.elcBtn{
+ margin-top: 128px;}
 
 /*-- header area --*/
 
@@ -942,8 +944,7 @@ line-height: 35px;
 .inner_page .blog {
      margin-top: 90px;
 }
-.elcBtn{
- margin-top: 128px;}
+
 
 
 
