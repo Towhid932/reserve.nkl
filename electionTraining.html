@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.maateen.me/nikosh/font.css" rel="stylesheet">
+  <title>Election Course, NKL </title>
+  <link rel="stylesheet" href="style_ElectionTraining.css">
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h3 style="text-align: center;">জাতীয় নির্বাচনী উপলক্ষ্যে ৩ দিন মেয়াদী সক্ষমতা ও দক্ষতা বৃদ্ধি কোর্স<br>
+রিজার্ভ অফিস, নোয়াখালী।</h3>
+<header>প্রশিক্ষণার্থীর তথ্যাদি</header>
+      <!-- Registration form -->
+      <form name="submit-to-google-sheet" action="#">
+        <div class="user-details">
+
+
+            <!-- Input for Phone Number -->
+          <div class="input-box">
+            <span class="details">থানা/ইউনিট <span class="starFild">*</span></span>
+            <select id="unitList" onchange="test()" name="থানা/ইউনিট" class="input-box" required>
+              <option value="">- বাচাই করুন -</option>
+              <option value="সুধারাম মডেল থানা">সুধারাম মডেল থানা</option>
+              <option value="বেগমগঞ্জ মডেল থানা">বেগমগঞ্জ মডেল থানা</option>
+              <option value="চাটখিল থানা">চাটখিল থানা</option>
+              <option value="সোনাইমুরি থানা">সোনাইমুরি থানা</option>
+              <option value="সেনবাগ থানা">সেনবাগ থানা</option>
+              <option value="কোম্পানীগঞ্জ থানা">কোম্পানীগঞ্জ থানা</option>
+              <option value="কবিরহাট থানা">কবিরহাট থানা</option>
+              <option value="চরজব্বার থানা">চরজব্বার থানা</option>
+              <option value="হাতিয়া থানা">হাতিয়া থানা</option>
+              <option value="ভাসানচর থানা">ভাসানচর থানা</option>
+              <option value="ডিবি">ডিবি</option>
+              <option value="ডিএসবি">ডিএসবি</option>
+              <option value="সদর কোর্ট">সদর কোর্ট</option>
+              <option value="হাতিয়া কোর্ট">হাতিয়া কোর্ট</option>
+              <option value="মোর্শেদ বাজার তদন্ত কেন্দ্র">মোর্শেদ বাজার তদন্ত কেন্দ্র</option>
+              <option value="জাহাজমারা তদন্ত কেন্দ্র">জাহাজমারা তদন্ত কেন্দ্র</option>
+              <option value="নিঝুমদ্বীপ তদন্ত কেন্দ্র">নিঝুমদ্বীপ তদন্ত কেন্দ্র</option>
+              <option value="খিলপাড়া তদন্ত কেন্দ্র">খিলপাড়া তদন্ত কেন্দ্র</option>
+              <option value="কেরিংচর তঃ কেন্দ্র">কেরিংচর তঃ কেন্দ্র</option>
+              <option value="সদর ফাঁড়ি">সদর ফাঁড়ি</option>
+              <option value="চৌমুহনী ফাঁড়ি">চৌমুহনী ফাঁড়ি</option>
+              <option value="চরজব্বর পুলিশ ফাঁড়ি">চরজব্বর পুলিশ ফাঁড়ি</option>
+              <option value="সাগরিয়া পুলিশ ফাঁড়ি">সাগরিয়া পুলিশ ফাঁড়ি</option>
+              <option value="তমরুদ্দি পুলিশ ফাঁড়ি">তমরুদ্দি পুলিশ ফাঁড়ি</option>
+              <option value="নলচিরা নৌ পুলিশ ফাঁড়ি">নলচিরা নৌ পুলিশ ফাঁড়ি</option>
+              <option value="সদর ট্রাফিক">সদর ট্রাফিক</option>
+              <option value="চৌমুহনী ট্রাফিক">চৌমুহনী ট্রাফিক</option>
+              <option value="সেনবাগ ট্রাফিক">সেনবাগ ট্রাফিক</option>
+              <option value="সোনাইমুরি ট্রাফিক">সোনাইমুরি ট্রাফিক</option>
+              <option value="কোম্পানীগঞ্জ ট্রাফিক">কোম্পানীগঞ্জ ট্রাফিক</option>
+              <option value="চেয়ারম্যানঘাট পুলিশ ক্যাম্প">চেয়ারম্যানঘাট পুলিশ ক্যাম্প</option>
+              <option value="ছনখোলা পুলিশ ক্যাম্প">ছনখোলা পুলিশ ক্যাম্প</option>
+              <option value="চরবালুয়া পুলিশ (উড়িরচর) ক্যাম্প">চরবালুয়া পুলিশ (উড়িরচর) ক্যাম্প</option>
+              <option value="রাজগঞ্জ বাজার ক্যাম্প">রাজগঞ্জ বাজার ক্যাম্প</option>
+              <option value="মাঈনুদ্দিন বাজার ক্যাম্প">মাঈনুদ্দিন বাজার ক্যাম্প</option>
+              <option value="সদর সার্কেল অফিস">সদর সার্কেল অফিস</option>
+              <option value="বেগমগঞ্জ সার্কেল অফিস">বেগমগঞ্জ সার্কেল অফিস</option>
+              <option value="চাটখিল সার্কেল অফিস">চাটখিল সার্কেল অফিস</option>
+              <option value="হাতিয়া সার্কেল অফিস">হাতিয়া সার্কেল অফিস</option>
+              <option value="পুলিশ সুপারের কার্যালয়">পুলিশ সুপারের কার্যালয়</option>
+              <option value="অর্থ/প্রশাসন">অর্থ/প্রশাসন</option>
+              <option value="অপরাধ শাখা">অপরাধ শাখা</option>
+              <option value="মহিলা পুলিশ">মহিলা পুলিশ</option>
+              <option value="ক্রাইম প্রিভেনশন এন্ড কমিউনিটি পুলিশিং">ক্রাইম প্রিভেনশন এন্ড কমিউনিটি পুলিশিং</option>
+              <option value="রিজার্ভ অফিস">রিজার্ভ অফিস</option>
+              <option value="পুলিশ লাইন">পুলিশ লাইন</option>
+              <option value="এমটি">এমটি</option>
+              <option value="রেশন স্টোর">রেশন স্টোর</option>
+              <option value="ক্লোথিং স্টোর">ক্লোথিং স্টোর</option>
+              <option value="অস্ত্রাগার">অস্ত্রাগার</option>
+              <option value="ব্যান্ড গ্রুপ">ব্যান্ড গ্রুপ</option>
+              <option value="পুলিশ হাসপাতাল">পুলিশ হাসপাতাল</option>
+              <option value="ইন-সার্ভিস ট্রেনিং">ইন-সার্ভিস ট্রেনিং</option>
+              <option value="পুলিশ কন্ট্রোল রুম">পুলিশ কন্ট্রোল রুম</option>
+            </select>
+          </div>
+
+          <!-- Input for Phone Number -->
+          <div class="input-box">
+            <span class="details">ব্যাচ <span class="starFild">*</span></span>
+            <select id="unitList" onchange="test()" name="ব্যাচ" class="input-box" required>
+              <option value="">- বাচাই করুন -</option>
+              <option value="1">১ম ব্যাচ</option>
+              <option value="2">২য় ব্যাচ</option>
+              <option value="3">৩য় ব্যাচ</option>
+              <option value="4">৪র্থব্যাচ</option>
+              <option value="5">৫ম ব্যাচ</option>
+              <option value="6">৬ষ্ঠ ব্যাচ</option>
+              <option value="7">৭ম ব্যাচ</option>
+              <option value="8">৮ম ব্যাচ</option>
+              <option value="9">৯ম ব্যাচ</option>
+              <option value="10">১০তম ব্যাচ</option>
+              <!-- <option value="11">ব্যাচ</option>
+              <option value="12">ব্যাচ</option>
+              <option value="13">ব্যাচ</option>
+              <option value="14">ব্যাচ</option>
+              <option value="15">ব্যাচ</option>
+              <option value="16">ব্যাচ</option>
+              <option value="17">ব্যাচ</option>
+              <option value="18">ব্যাচ</option>
+              <option value="19">ব্যাচ</option>
+              <option value="Merit 30">ব্যাচ</option>
+              <option value="Merit 31">Merit 31</option>
+              <option value="Merit 32">Merit 32</option>
+              <option value="Merit 33">Merit 33</option>
+              <option value="Merit 34">Merit 34</option>
+              <option value="Merit 35">Merit 35</option>
+              <option value="Merit 36">Merit 36</option>
+              <option value="Merit 37">Merit 37</option>
+              <option value="Merit 38">Merit 38</option>
+              <option value="Merit 39">Merit 39</option>
+              <option value="Merit 40">Merit 40</option>
+              <option value="Merit 41">Merit 41</option>
+              <option value="Merit 42">Merit 42</option>
+              <option value="Merit 43">Merit 43</option> -->
+            </select>
+          </div>
+          <!-- Input for Phone Number -->
+          <div class="input-box">
+            <span class="details">BP Number <span class="starFild">*</span></span>
+            <input id="postingOrder-input" onchange="test()"  name="বিপি_নাম্বার" type="tel"  minlength=12 maxlength=12 required placeholder="ইংরেজীতে বিপি লিখুন নমুনা : BP9920229921 ">
+          </div>
+
+           <!-- Input for Phone Number -->
+          <div class="input-box">
+            <span class="details">পদবি <span class="starFild">*</span></span>
+            <select id="optionList" onchange="test()" name="পদবি" class="input-box"  required>
+              <option value="">- বাচাই করুন -</option>
+              <option value="কনস্টেবল">কনস্টেবল</option>
+              <option value="নায়েক">নায়েক</option>
+              <option value="এএসআই (নিরস্ত্র)">এএসআই (নিরস্ত্র)</option>
+              <option value="এএসআই (সশস্ত্র)">এএসআই (সশস্ত্র)</option>
+              <option value="এটিএসআই">এটিএসআই</option>              
+              <option value="এসআই (নিরস্ত্র)">এসআই (নিরস্ত্র)</option>
+              <option value="এসআই (সশস্ত্র)">এসআই (সশস্ত্র)</option>
+              <option value="সার্জেন্ট">সার্জেন্ট</option>
+              <option value="টিএসআই">টিএসআই</option>
+              <option value="ইন্সপেক্টর (নিরস্ত্র)">ইন্সপেক্টর (নিরস্ত্র)</option>
+              <option value="ইন্সপেক্টর (সশস্ত্র)">ইন্সপেক্টর (সশস্ত্র)</option>
+              <option value="ইন্সপেক্টর (টিটি)">ইন্সপেক্টর (টিটি)</option>
+            </select>
+          </div>
+          <!-- Input for Phone Number -->
+          <div class="input-box">
+            <span class="details">নাম <span class="starFild">*</span></span>
+            <input id="postingOrderDate-input" onchange="test()" name="নাম" type="text"  required placeholder="নাম (বাংলায় লিখুন)">
+          </div>
+
+           <!-- Input for ব্রাশ_নাম্বার -->
+           <div class="input-box">
+            <span class="details">ব্রাশ নাম্বর (যদি থাকে)</span>
+            <input name="ব্রাশ_নাম্বার"type="text" placeholder="ব্রাশ নাম্বার থাকলে শুধু ইংরেজীতে লিখুন">
+          </div>
+         
+
+          <!-- Input for Phone Number -->
+          <div class="input-box">
+            <span class="details">ভেন্যু <span class="starFild">*</span></span>
+            <select id="optionList" onchange="test()" name="ভেন্যু" class="input-box"  required>
+              <option value="">- বাচাই করুন -</option>
+              <option value="ইন-সার্ভিস ট্রেনিং সেন্টার, নোয়াখালী">ইন-সার্ভিস ট্রেনিং সেন্টার, নোয়াখালী</option>
+              <option value="বহিঃ জেলা হতে সম্পন্ন">পূর্ববর্তী জেলা/ইউনিট হতে সম্পন্ন</option>
+            </select>
+          </div>
+
+          <div class="input-box">
+            <label>WhatsApp Number</label><span class="starFild">*</span>
+            <input name="হোয়াটসঅ্যাপ_নম্বর"type="tel" minlength="11" maxlength="11" placeholder="What's app Number11 Digit" required/>
+          </div>
+          <div class="input-box">
+            <label>মন্তব্য</label>
+            <input name="মন্তব্য"type="text" placeholder="বাংলায় লিখুন (যদি থাকে)" />
+          </div>
+          <div class="input-box">
+            <label>নোট : পূর্ববর্তী জেলা/ইউনিট হতে কোর্স সম্পন্ন করলে মন্তব্য কলামে জেলা/ইউনিটের নাম লিখতে হবে</label>
+          </div>
+            <input id="inputKey" name="keyID" style="display: none;"></input>
+
+
+        </div>
+        <!-- Submit button -->
+        <div class="button">
+          <input id="submit" type="submit" value="SAVE">
+          <input id="submit" type="reset" value="Reset">
+        </div>
+
+        <span class="starFild">কোন পুলিশ সদস্য কোর্সটি ০১ বার সম্পন্ন করলে তাকে পরবর্তীতে মনোনীত করা যাবে না।</span>
+        
+      </form>
+    </div>
+  </div>
+
+
+
+  <script>
+        const result=document.getElementById("result")
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxPuVkNvgM1BreW61lAvEFlMd07Zj7tzsdmNT_LJkqmcZ6MDSK4uYbTARQNeFYiC-o/exec'
+      const form = document.forms['submit-to-google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then(response => alert('ধন্যবাদ!!! আপনার জাতীয় নির্বাচন উপলক্ষ্যে সক্ষমতা ও দক্ষতা বৃদ্ধি সংক্রান্তে দাখিলকৃত তথ্যটি জমা হয়েছে। রিজার্ভ অফিস হতে সঠিক ভাবে তথটি জমা হয়েছে কি-না জানতে পারেন। ভূল/সংশোধন থাকলে ০১৬৪১৬৬৩৫৯৬ নাম্বারে যোগাযোগ করে সংশোধন করার জন্য অনুরোধ করা হলো।', response))
+          
+          .catch(error => console.error('Error!', error.message))
+          alert("আপনার ট্রেনিং এর তথ্য সমূহ সঠিক? সঠিক থাকলে OK বাটনে ক্লিক করুন",form.reset())
+         
+      })
+
+      
+
+
+      function test(){
+        const stetasInput = document.getElementById('stetasInput')
+        const postingOrderInput = document.getElementById('postingOrder-input')
+        const postingOrderDateInput = document.getElementById('postingOrderDate-input')
+        const postingOrderYear = postingOrderDateInput.value.slice(0,4);
+        const inputKey = document.getElementById('inputKey')
+        var x = document.getElementById("optionList");
+        var y = document.getElementById("unitList");
+        const bpInput = document.getElementById('bpInput')
+
+
+        var select1=x.options[x.selectedIndex].text;
+        var select2=y.options[y.selectedIndex].text;
+
+          inputKey.value = select1+ select2+ postingOrderInput.value +postingOrderYear + bpInput.value;}
+
+    </script>
+</body>
+</html>
+
+
