@@ -98,7 +98,7 @@
         <nav class="navbar navbar-expand-rg bg-secondary " id="mainNav">
             <div class="container py-2 justify-content-center  justify-content-md-between">
                 <a href="index.html" class="navbar-brand js-scroll-trigger">
-                    <h2 class="text-white">Data Entry Form</h2>
+                    <h2 class="text-white">Postal Vote Data Entry Form</h2>
                 </a>
                 <div class="d-flex">
                     <button
@@ -157,7 +157,7 @@
 
                     </a>
                     <h5 class="text-muted fw-normal mb-4"></h5>
-                    <h3 class="mb-2"><b>এসআই(নিরস্ত্র)’দের তথ্যাদি</b></h3>
+                    <h3 class="mb-2"><b>Postal Vote এ রেজিস্ট্রেশন সম্পন্নকারী পুলিশ সদস্যদের তথ্যাদি</b></h3>
                 <div class="text-left"></div>
                 <form class="form-horizontal mt-4 pt-2 px-2 mx-auto" name="submit-to-google-sheet">
                     <div class="row">
@@ -173,9 +173,8 @@
                             <input id="username" class="form-control" type="text" name="মোবাইল নম্বর" value="" placeholder="Whatsapp Number)" minlength="11" maxlength="11" required />
                         </div>
                         <div class="col-md-6 mb-3">
-                            <select name="থানা/ইউনিট" id="division_id" class="js-example-basic-single form-select"
-                                data-width="100%">
-                                <option disabled selected>-- থানা/ইউনিট --</option>
+                            <select name="থানা/ইউনিট" id="division_id" class="js-example-basic-single form-select" data-width="100%" required>
+                                <option value="">-- থানা/ইউনিট --</option>
                                 <option value="সুধারাম মডেল থানা">সুধারাম মডেল থানা</option>
                                 <option value="বেগমগঞ্জ মডেল থানা">বেগমগঞ্জ মডেল থানা</option>
                                 <option value="চাটখিল থানা">চাটখিল থানা</option>
@@ -215,10 +214,12 @@
                                 <option value="বেগমগঞ্জ সার্কেল অফিস">বেগমগঞ্জ সার্কেল অফিস</option>
                                 <option value="চাটখিল সার্কেল অফিস">চাটখিল সার্কেল অফিস</option>
                                 <option value="হাতিয়া সার্কেল অফিস">হাতিয়া সার্কেল অফিস</option>
+                                <option value="পুলিশ সুপারের কার্যালয়">পুলিশ সুপারের কার্যালয়</option>
                                 <option value="অর্থ/প্রশাসন">অর্থ/প্রশাসন</option>
                                 <option value="অপরাধ শাখা">অপরাধ শাখা</option>
                                 <option value="মহিলা পুলিশ">মহিলা পুলিশ</option>
                                 <option value="ক্রাইম প্রিভেনশন এন্ড কমিউনিটি পুলিশিং">ক্রাইম প্রিভেনশন এন্ড কমিউনিটি পুলিশিং</option>
+                                <option value="ডিপার্টামেন্টাল স্টোর">ডিপার্টামেন্টাল স্টোর</option>
                                 <option value="রিজার্ভ অফিস">রিজার্ভ অফিস</option>
                                 <option value="পুলিশ লাইন">পুলিশ লাইন</option>
                                 <option value="এমটি">এমটি</option>
@@ -227,19 +228,17 @@
                                 <option value="অস্ত্রাগার">অস্ত্রাগার</option>
                                 <option value="ব্যান্ড গ্রুপ">ব্যান্ড গ্রুপ</option>
                                 <option value="পুলিশ হাসপাতাল">পুলিশ হাসপাতাল</option>
-                                <option value="ইন-সার্ভিস ট্রেনিং">ইন-সার্ভিস ট্রেনিং</option>
                                 <option value="পুলিশ কন্ট্রোল রুম">পুলিশ কন্ট্রোল রুম</option>
                                 <option value="রিজার্ভ সাময়িক বরখাস্ত">রিজার্ভ সাময়িক বরখাস্ত</option>
                                 <option value="ইউমেন সাপোর্ট সেন্টার">ইউমেন সাপোর্ট সেন্টার</option>
                                 <option value="রিজার্ভ লাইন ওয়ার">রিজার্ভ লাইন ওয়ার</option>
-                                <option value="পুলিশ লাইন্স ড্রাইভার">পুলিশ লাইন্স ড্রাইভার</option>
-                                <option value="ডিপার্টামেন্টাল স্টোর">ডিপার্টামেন্টাল স্টোর</option>
+                                <option value="প্রেষণে কর্মরত">প্রেষণে কর্মরত (মন্তব্য কলামে ইউনিটের নাম লিখতে হবে)</option>
                             </select>
                         </div>
                         <div class="col-md-6 mb-3">
                             <select name="পদবি" id="division_id" class="js-example-basic-single form-select"
-                                data-width="100%">
-                                <option disabled selected>-- পদবি --</option>
+                                data-width="100%" required>
+                                <option value="">-- পদবি --</option>
                                 <option value="এসপি">এসপি</option>
                                 <option value="অ্যাডিশনাল এসপি">অ্যাডিশনাল এসপি</option>
                                 <option value="এএসপি">এএসপি</option>
@@ -259,8 +258,16 @@
                         </div>
 
                         <div class="col-md-6">
+                            <input id="place" class="form-control" type="tel" maxlength="4" minlength="2" name="ব্রাশ নাম্বার"
+                                value="" placeholder="ব্রাশ নাম্বার লিখুন"/>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="place" class="form-control" type="tel" maxlength="17" minlength="10" name="এনআইডি নাম্বার"
+                                value="" placeholder="এনআইডি নাম্বার লিখুন" required/>
+                        </div>
+                        <div class="col-md-6">
                             <input id="place" class="form-control" type="text" name="মন্তব্য"
-                                value="" placeholder="মন্তব্য থাকলে লিখুন" required />
+                                value="" placeholder="মন্তব্য থাকলে লিখুন"/>
                         </div>
                         <div class="col-md-12 text-start my-2">
                             <label for="terms"><input type="checkbox" id="terms">এন্ট্রিকৃত তথ্য দেখার জন্য তালিকায় <a href="https://docs.google.com/spreadsheets/d/1eokZPLxGoeaZQ1X9XJ2QUkRDD6AYGfZe0f9YOQxO1fM/edit?usp=sharing" target="_blank">এখানে </a>ক্লিক করুন</label>
@@ -287,7 +294,7 @@
     </div>
  <script>
         const result=document.getElementById("result")
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbxYOpYVSFBBeoaI-pdOXDzJCsMZIOyLqyfYtwsoVfM_4Buo2X7bygW4k61A8o1YTgfe/exec'
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzMjk4uvH3PS3rkKTzYDAf2glFRNU8ejCKNJ535faBCHuSxN-cG78tQOlkdlN-k60h1/exec'
       const form = document.forms['submit-to-google-sheet']
     
       form.addEventListener('submit', e => {
